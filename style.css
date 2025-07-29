@@ -703,7 +703,70 @@ footer .copyright {
   z-index: -9;
 }
 
-@media (max-width:799px) {
+#page-header.about-header {
+  background-image: url("img/about/banner.png");
+}
+
+#about-head {
+  display: flex;
+  align-items: center;
+}
+
+#about-head img {
+  width: 50%;
+  height: auto;
+}
+
+#about-head div {
+  padding-left: 40px;
+}
+
+.marquee {
+  position: relative;
+  width: 100%;
+  height: 2em;
+  overflow: hidden;
+  background-color: #ccc;
+  box-sizing: border-box;
+}
+
+.marquee span {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  left: 100%;
+  animation: marquee 12s linear infinite;
+}
+
+#about-app {
+  text-align: center;
+}
+
+#about-app .video {
+  width: 70%;
+  height: 100%;
+  margin: 30px auto 0 auto;
+}
+
+#about-app .video video {
+  width: 100%;
+  height: 100;
+  border-radius: 20px;
+}
+
+@keyframes marquee {
+  0% {
+    left: 100%;
+  }
+
+  100% {
+    left: -100%;
+  }
+}
+
+
+@media (max-width:800px) {
   .section-p1 {
     padding: 40px 40px;
   }
@@ -715,7 +778,7 @@ footer .copyright {
     justify-content: flex-start;
     position: fixed;
     top: 0;
-    right: 0px;
+    right: -300px;
     height: 100vh;
     width: 300px;
     background-color: #E3E6F3;
@@ -728,7 +791,7 @@ footer .copyright {
     right: 0px;
   }
 
-  #navber li {
+  #navbar li {
     margin-bottom: 25px;
   }
 
@@ -750,6 +813,7 @@ footer .copyright {
     left: 30px;
     color: #222;
     font-size: 24px;
+    cursor: pointer;
   }
 
   #lg-bag {
@@ -901,6 +965,25 @@ footer .copyright {
   }
 
   #blog .blog-details {
+    width: 100%;
+  }
+
+  /* About Page */
+
+  #about-head {
+    flex-direction: column;
+  }
+
+  #about-head img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  #about-head div {
+    padding-left: 0px;
+  }
+
+  #about-app .video {
     width: 100%;
   }
 
